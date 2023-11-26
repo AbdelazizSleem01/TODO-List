@@ -1,0 +1,80 @@
+body{
+
+    background-color: #aaa;
+}
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & h2{
+        font-size: 35px;
+        border-bottom: #000 solid;
+        font-weight: 800;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    & h3{
+        color: red;
+        font-size: 35px;
+        font-weight: 800;
+        text-shadow: #000 1px 2px 3px   ;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+
+.Text_input {
+    width: 300px;
+    padding: 10px;
+    border-bottom: 2px solid black;
+    outline: none;
+    /* border-radius: 5px; */
+    border-start-start-radius: 6px;
+    border-end-start-radius: 6px;
+    font-weight: 600;
+
+}
+
+.Add_button {
+    padding: 10px;
+    background-color: black;
+    color: #FFF;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+    border-start-end-radius: 6px;
+    border-end-end-radius: 6px;
+    font-weight: 600;
+}
+
+.Task_Added {
+    display: flex;
+    align-items: center;
+    width: 345px;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+    height: 35px;
+    padding: 7px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+.Check_box {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.span {
+    margin: 0px 5px 0px 4px;
+}
+
+.line_through {
+    text-decoration: line-through;
+}
