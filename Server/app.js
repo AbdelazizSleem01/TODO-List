@@ -6,7 +6,7 @@ const TodoModel = require("./Models/Todo")
 
 const app = express()
 app.use(cors(
-     orogin:['http://TODOlist.vercel.app'],
+     orogin:['http://todo-list-4abt.vercel.app'],
 
         methods:["POST", "GET"],
         
