@@ -5,16 +5,7 @@ const cors = require("cors")
 const TodoModel = require("./Models/Todo")
 
 const app = express()
-app.use(cors(
-    {
-        orogin:['http://TODOlist.vercel.app'],
-        
-        methods:["POST", "GET"],
-        
-        credentials:true
-
-    }
-))
+app.use(cors())
 app.use(express.json())
 
 mongoose.connect('mongodb+srv://zezofalcon01:AZ01007488071az@dbbackend.jzoz9jx.mongodb.net/zezo')
