@@ -10,7 +10,7 @@ const Home = () => {
     const [todos, setTodos] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/get')
+        axios.get('https://mern-todolist-rvav.onrender.com/get')
             .then(result => setTodos(result.data))
             .catch(err => console.log(err))
     }, [])
@@ -18,7 +18,7 @@ const Home = () => {
     const handleEdit = (id, currentDoneStatus) => {
         const updatedDoneStatus = !currentDoneStatus;
         axios
-            .put(`http://localhost:3000/update/${id}`, { done: updatedDoneStatus })
+            .put(`https://mern-todolist-rvav.onrender.com/update/${id}`, { done: updatedDoneStatus })
             .then(result => {
                 console.log(result);
                 setTodos(prevTodos => prevTodos.map(todo => todo._id === id ? { ...todo, done: updatedDoneStatus } : todo)
@@ -29,7 +29,7 @@ const Home = () => {
 
     const handleDelete = (id) => {
         axios
-            .delete(`http://localhost:3000/delete/${id}`)
+            .delete(`https://mern-todolist-rvav.onrender.com/delete/${id}`)
             .then(result => {
                 console.log(result);
                 // prevent reload
