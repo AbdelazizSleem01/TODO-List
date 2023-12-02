@@ -8,7 +8,7 @@ const app = express()
 app.use(cors(
     {
         orogin:['http://TODOlist.vercel.app'],
-
+        
         methods:["POST", "GET"],
         
         credentials:true
