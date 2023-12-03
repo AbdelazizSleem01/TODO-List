@@ -48,6 +48,6 @@ app.delete('/delete/:id', (req, res) => {
         .catch(err => res.json(err))
 })
 
-app.listen(3000, () => {
+app.listen(10000, () => {
     console.log("Server Is Running ")
 })
