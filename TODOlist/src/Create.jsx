@@ -4,7 +4,7 @@ import axios from 'axios'
 const Creat = () => {
     const [task, setTask] = useState()
     const handleAdd = () => {
-        axios.post('https://mern-todolist-rvav.onrender.com/add', { task: task })
+        axios.post('https://todo-mern-list.onrender.com//add', { task: task })
             .then(result => {
                 //reload Automatic
                 location.reload()
