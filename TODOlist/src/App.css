@@ -1,5 +1,4 @@
 body{
-
     background-color: #aaa;
 }
 .home {
@@ -51,7 +50,7 @@ body{
     justify-content: space-between;
     background-color: #000;
     color: #fff;
-    height: 35px;
+    height: 45px;
     padding: 7px 10px;
     margin: 10px;
     border-radius: 5px;
@@ -63,6 +62,9 @@ body{
 .Check_box {
     display: flex;
     align-items: center;
+    & p{
+        margin-top: 15px;
+    }
 }
 
 .icon {
@@ -73,8 +75,44 @@ body{
 
 .span {
     margin: 0px 5px 0px 4px;
+    
 }
 
 .line_through {
-    text-decoration: line-through;
+    border-bottom: #ffffff 2px solid;
+    margin-top: 10px;
+}
+.popup{
+
+
+    & input{
+        height: 30px;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        margin: 5px;
+        padding-left: 15px;
+    }
+    & button{
+        height: 30px;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    & span{
+        font-size: 30px;
+        position: absolute;
+        top: 15px;
+        right:  15px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+    
+}
+
+.popup-btn :active{
+filter: blur(20px);
 }

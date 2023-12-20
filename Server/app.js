@@ -23,7 +23,7 @@ app.post('/add', (req, res) => {
     const task = req.body.task;
     if (!task) {
         // If the task is empty
-        return res.status(400).json({ error: 'Task is required' });
+        return res.send({ error: 'Task is required' });
     }
     TodoModel.create({
         task: task
@@ -34,6 +34,13 @@ app.post('/add', (req, res) => {
 
 //Update Tasks
 app.put('/update/:id', (req, res) => {
+    const { id } = req.params
+    TodoModel.findByIdAndUpdate({ _id: id }, { done: req.body.done })
+        .then(result => res.json(result))
+        .catch(err => res.json(err))
+})
+
+app.put('/popup/:id', (req, res) => {
     const { id } = req.params
     TodoModel.findByIdAndUpdate({ _id: id }, { done: req.body.done })
         .then(result => res.json(result))
